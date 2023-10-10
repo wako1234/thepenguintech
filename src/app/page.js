@@ -7,7 +7,7 @@ export default function Home() {
         <Image
           className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert rounded-3xl"
           src="/tpt.png"
-          alt="Next.js Logo"
+          alt=""
           width={180}
           height={37}
           priority
@@ -26,7 +26,7 @@ export default function Home() {
           <Image
             className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] rounded-3xl"
             src="/books.png"
-            alt="Next.js Logo"
+            alt=""
             width={100}
             height={37}
             priority
