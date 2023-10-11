@@ -13,10 +13,7 @@ export default function Home() {
         />
       </div>
 
-      <h2 className={`mb-3 text-2xl font-semibold`}>
-        The Penguin Technologies
-      </h2>
-      <h4 className={`mb-3 text-2xl font-semibold`}>Products</h4>
+      <h2 className={`mb-3 text-3xl font-bold`}>The Penguin Technologies</h2>
 
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
         <a
