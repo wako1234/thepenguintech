@@ -13,7 +13,10 @@ export default function Home() {
         />
       </div>
 
-      <h2 className={`mb-3 text-2xl font-semibold`}>Mobile Applications </h2>
+      <h2 className={`mb-3 text-2xl font-semibold`}>
+        The Penguin Technologies
+      </h2>
+      <h4 className={`mb-3 text-2xl font-semibold`}>Products</h4>
 
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
         <a
@@ -22,19 +25,11 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
+          <img
             className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] rounded-3xl"
             src="/books.png"
             alt=""
-            width={100}
-            height={37}
-            priority
-          />
-          <img
-            className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert rounded-3xl"
-            src="/tpt.png"
-            alt=""
-            width={180}
+            width={80}
             height={37}
           />
           <h2 className={`mb-3 text-2xl font-semibold`}>
