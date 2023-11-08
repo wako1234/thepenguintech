@@ -11,6 +11,7 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import Head from "next/head";
+import { useRef } from "react";
 
 export default function Home() {
   function openProgrammingBooks() {
@@ -24,8 +25,47 @@ export default function Home() {
   function openUnicorn() {
     window.open("https://apple.co/3PQUeyX");
   }
+
+  const productsSectionRef = useRef(null);
+  const servicesSectionRef = useRef(null);
+  const clientSectionRef = useRef(null);
+
+  function scrollToProducts() {
+    if (productsSectionRef.current) {
+      productsSectionRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }
+
+  function scrollToServices() {
+    if (servicesSectionRef.current) {
+      servicesSectionRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }
+
+  function scrollToClient() {
+    if (clientSectionRef.current) {
+      clientSectionRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }
+
+  function openEmail() {
+    const subject = "Hello from the other side";
+    const email = "admin@thepenguin.tech";
+    const emailLink = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
+    window.location.href = emailLink;
+  }
+
   return (
-    <main class="bg-black mx-4">
+    <main class="bg-black">
       <Head>
         <title>The Penguin Technologies</title>
         <link rel="icon" href="/tpt.png" />
@@ -54,11 +94,30 @@ export default function Home() {
             <img className="relative " src="/tpt-text.png" alt="" width={180} />
           </a>
           <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-            <a class="mr-5 text-white hover:text-gray-300">Our Products</a>
-            <a class="mr-5 text-white hover:text-gray-300">Services</a>
-            <a class="mr-5 text-white hover:text-gray-300">Our Clients</a>
+            <a
+              class="mr-5 text-white hover:text-gray-300"
+              onClick={scrollToProducts}
+            >
+              Our Products
+            </a>
+            <a
+              class="mr-5 text-white hover:text-gray-300"
+              onClick={scrollToServices}
+            >
+              Services
+            </a>
+            <a
+              class="mr-5 text-white hover:text-gray-300"
+              onClick={scrollToClient}
+            >
+              Our Clients
+            </a>
           </nav>
-          <a class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+          <a
+            onClick={openEmail}
+            // href="mailto:admin@thepenguin.tech"
+            class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
+          >
             Contact Us
           </a>
         </div>
@@ -86,7 +145,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section class="text-gray-400">
+      <section id="our-products" ref={productsSectionRef} class="text-gray-400">
         <div class="container px-5 py-12 mt-6 mx-auto">
           <div class="text-center mb-20">
             <h1 class="sm:text-3xl text-2xl font-medium title-font text-white mb-4">
@@ -223,7 +282,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section class="text-gray-400">
+      <section class="text-gray-400" ref={servicesSectionRef}>
         <div class="container px-5 py-12 mt-6 mx-auto">
           <div class="text-center mb-20">
             <h1 class="sm:text-3xl text-2xl font-medium title-font text-white mb-4">
@@ -357,7 +416,8 @@ export default function Home() {
           </button> */}
         </div>
       </section>
-      <section class="text-gray-400 body-font">
+
+      <section class="text-gray-400 body-font" ref={clientSectionRef}>
         <div class="container px-5 py-24 mx-auto">
           <div class="text-center mb-20">
             <h1 class="sm:text-3xl text-2xl font-medium title-font text-white mb-4">
@@ -385,6 +445,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <footer class="text-gray-400 body-font">
         <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
           <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
