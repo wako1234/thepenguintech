@@ -25,7 +25,7 @@ export default function Home() {
     window.open("https://apple.co/3PQUeyX");
   }
   return (
-    <main class="bg-black">
+    <main class="bg-black mx-4">
       <Head>
         <title>The Penguin Technologies</title>
         <link rel="icon" href="/tpt.png" />
@@ -357,7 +357,34 @@ export default function Home() {
           </button> */}
         </div>
       </section>
-
+      <section class="text-gray-400 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="text-center mb-20">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font text-white mb-4">
+              Our Clients
+            </h1>
+            <div class="flex mt-6 justify-center">
+              <div class="w-16 h-1 rounded-full bg-blue-500 inline-flex"></div>
+            </div>
+          </div>
+          <div class="flex flex-wrap -mx-4 -mb-10 text-center mx-auto">
+            <div class="md:w-1/2 sm:w-1/1 mb-10 px-4 mx-auto">
+              <div class="overflow-hidden">
+                <img
+                  alt="content"
+                  class="object-fit object-center mx-auto bg-gray-700 bg-opacity-40 p-6 rounded-3xl"
+                  src="https://media.licdn.com/dms/image/C4E0BAQFrPTnUjbqrVg/company-logo_200_200/0/1611949478332/heinibuild_logo?e=2147483647&v=beta&t=-c-_I2UEoxRUWFuOoZBhzA2jVIw_D9uc-19KBx9ICG4"
+                />
+              </div>
+            </div>
+            <div class="md:w-1/2 sm:w-1/1 mb-10 px-4 mx-auto flex flex-row justify-center items-center">
+              <div class="font-bold w-60 h-60 text-center bg-gray-700 bg-opacity-40 p-6 rounded-3xl text-5xl text-white">
+                Seizure Detector
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <footer class="text-gray-400 body-font">
         <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
           <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
